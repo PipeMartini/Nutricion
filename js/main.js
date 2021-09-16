@@ -22,11 +22,18 @@ let apellido = document.getElementById("PacienteApellido").value;
 let dieta = document.getElementById("SeleccionDieta").value;
 let descartable = document.getElementById("descartable").checked;
 dietas.push(new Dieta (area, subarea, cama, nombre, apellido, dieta, descartable));
-
+localStorage.setItem("dietas",JSON.stringify(dietas));
 console.log("Area: "+ area + "    Subarea:"+ subarea + "    n° de cama: " + cama +"    Nombre y apellido: "+ nombre +" "+ apellido + "    Tipo de dieta: " + dieta + "    Descartable: "+ descartable);
-localStorage.setItem ("dietas", JSON.stringify(dietas));
-
+//localStorage.setItem ("dietas", JSON.stringify(dietas));
+//localStorage.setItem ("Area", JSON.stringify(area));
+//localStorage.setItem ("Subarea", JSON.stringify(subarea));
+//localStorage.setItem ("Cama", JSON.stringify(cama));
+//localStorage.setItem ("nombre", JSON.stringify(nombre));
+//localStorage.setItem ("apellido", JSON.stringify(apellido));
+//localStorage.setItem ("dieta", JSON.stringify(dieta));
+//localStorage.setItem ("descartable", JSON.stringify(descartable));
 }
+
 //----------------------------------------------------------------------------------------------------------------------
 //tengo que llamar los elementos e imprimirlos en las tablas. una de las tablas solo tiene que juntar los datos.
 // la otra tabla tiene que ir sumando los datos totales. una
