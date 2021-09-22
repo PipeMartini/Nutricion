@@ -13,6 +13,17 @@ let traerDatos = function () {
         }
         return 0;
     });
+    dietasrecibidas.sort((c, d) =>{
+        const ncamaC = c.ncama.toLowerCase();
+        const ncamaD = d.ncama.toLowerCase();
+        if (ncamaC < ncamaD){
+            return -1;
+        }
+        if (ncamaC > ncamaD){
+            return 1;
+        }
+        return 0;
+    });
     let html_content = '';
     
     for (let i = 0 ; i < dietasrecibidas.length ; i ++) {

@@ -1,9 +1,10 @@
 
-let dietasCargadas = JSON.parse(localStorage.getItem('dietas'));
 
-let RecargarDatos= function() { 
-for (let i = 0 ; i < dietasCargadas.length ; i ++) {
-//console.log(dietasCargadas[i].dietaseleccionada);
+
+let RecargarDatos = function() { 
+    let dietasCargadas = JSON.parse(localStorage.getItem('dietas'));
+    console.log(dietasCargadas)
+for (let i = 0 ; i < 90 ; i ++) {}
     switch (dietasCargadas[i].dietaseleccionada) {
         case 'Liviana sin sal/cortado' :
             console.log("pediatiraSinSal")
@@ -44,6 +45,6 @@ for (let i = 0 ; i < dietasCargadas.length ; i ++) {
         case 'Liquido':
             console.log("Liquido")
             break;
-            default:
+        default:
                 console.log("no hay dietas cargadas")
-        }}}
+        }}
