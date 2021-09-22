@@ -1,21 +1,53 @@
 <!doctype html>
 <html lang="en">
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" type="text/css" href="scss/estilo.css">
-    <script src="js/tabla.js"></script>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" type="text/css" href="scss/estilo.css">
+        <script src="js/Enviado.js" defer></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script defer src="js/main.js" defer></script>
+    
     <title>Nutrición</title>
 </head>
 
 <body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a id="inicio" class="navbar-brand" href="index.html">INICIO</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                SELECCIONA AREA
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a id="areaA" class="container fluid" href="Pediatria.html">PEDIATRIA</a>
+                            <a id="areaB" class="container fluid" href="UCI.html">UCI</a>
+                            <a id="areaA" class="container fluid" href="MAT.html">MAT</a>
+                            <a id="areaB" class="container fluid" href="CMM.html">CMM</a>
+                            <a id="areaA" class="container fluid" href="SalaCovid.html">Sala covid</a>
+                            <a id="areaB" class="container fluid" href="CMH.html">CMH</a>
+                            <a id="areaA" class="container fluid" href="NEO.html">NEO</a>
+                            <a id="areaB" class="container fluid" href="UTI.html">UTI</a>
+                            <a id="areaA" class="container fluid" href="HSM.html">HSM</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <a id="inicio" class="navbar-brand" href="Tablas.html">COCINA</a>
+            <a id="inicio" class="navbar-brand" href="TablasImpresion.html">IMPRIMIBLE</a>
+        </nav>
+    </header>
+<body>
     <main>
-        <button class="container col-1 btn-danger"  type="button" onclick="imprimir()"> Traer datos</button>
-
+        <a href="#" onclick="RecargarDatos()" id="RecargarDatos" class="btn btn-primary btn-lg active mt-4" role="button" aria-pressed="true">CARGAR DATOS</a>
         <div class= "container" id="respuestaTXT"></div>
         <table class="table table-striped">
             <thead>
@@ -33,93 +65,93 @@
             <tbody id="respuesta">
                 <tr>
                     <th scope="row">PEDIATRIA</th>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
+                    <td id="pediatriaSinSal">1</td>
+                    <td id="pediatriaLivi">2</td>
+                    <td id="pediatriaBlan">3</td>
+                    <td id="pediatriaAstr">4</td>
+                    <td id="pediatriaDbt">5</td>
+                    <td id="pediatriaLic">6</td>
+                    <td id="pediatriaLiq">7</td>
                 </tr>
                 <tr>
                     <th scope="row">UCI</th>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
+                    <td id="UciSinSal">1</td>
+                    <td id="UciLivi">2</td>
+                    <td id="UciBlan">3</td>
+                    <td id="UciAstr">4</td>
+                    <td id="UciDbt">5</td>
+                    <td id="UciLic">6</td>
+                    <td id="UciLiq">7</td>
                 </tr>
                 <tr>
                     <th scope="row">MAT</th>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
+                    <td id="MatSinSal">1</td>
+                    <td id="MatLivi">2</td>
+                    <td id="MatBlan">3</td>
+                    <td id="MatAstr">4</td>
+                    <td id="MatDbt">5</td>
+                    <td id="MatLic">6</td>
+                    <td id="MatLiq">7</td>
                 </tr>
                 <tr>
                     <th scope="row">CMM</th>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
+                    <td id="CmmSinSal">1</td>
+                    <td id="CmmLivi">2</td>
+                    <td id="CmmBlan">3</td>
+                    <td id="CmmAstr">4</td>
+                    <td id="CmmDbt">5</td>
+                    <td id="CmmLic">6</td>
+                    <td id="CmmLiq">7</td>
                 </tr>
                 <tr>
                     <th scope="row">Sala covid</th>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
+                    <td id="SalaCovidSinSal">1</td>
+                    <td id="SalaCovidLivi">2</td>
+                    <td id="SalaCovidBlan">3</td>
+                    <td id="SalaCovidAstr">4</td>
+                    <td id="SalaCovidDbt">5</td>
+                    <td id="SalaCovidLic">6</td>
+                    <td id="SalaCovidLiq">7</td>
                 </tr>
                 <tr>
                     <th scope="row">CMH</th>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
+                    <td id="CmhSinSal">1</td>
+                    <td id="CmhLivi">2</td>
+                    <td id="CmhBlan">3</td>
+                    <td id="CmhAstr">4</td>
+                    <td id="CmhDbt">5</td>
+                    <td id="CmhLic">6</td>
+                    <td id="CmhLiq">7</td>
                 </tr>
                 <tr>
                     <th scope="row">NEO</th>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
+                    <td id="NeoSinSal">1</td>
+                    <td id="NeoLivi">2</td>
+                    <td id="NeoBlan">3</td>
+                    <td id="NeoAstr">4</td>
+                    <td id="NeoDbt">5</td>
+                    <td id="NeoLic">6</td>
+                    <td id="NeoLiq">7</td>
                 </tr>
                 <tr>
                     <th scope="row">UTI</th>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
+                    <td id="UtiSinSal">1</td>
+                    <td id="UtiLivi">2</td>
+                    <td id="UtiBlan">3</td>
+                    <td id="UtiAstr">4</td>
+                    <td id="UtiDbt">5</td>
+                    <td id="UtiLic">6</td>
+                    <td id="UtiLiq">7</td>
                 </tr>
                 <tr>
                     <th scope="row">HSM</th>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
+                    <td id="HsmSinSal">1</td>
+                    <td id="HsmLivi">2</td>
+                    <td id="HsmBlan">3</td>
+                    <td id="HsmAstr">4</td>
+                    <td id="HsmDbt">5</td>
+                    <td id="HsmLic">6</td>
+                    <td id="HsmLiq">7</td>
                 </tr>
 
             </tbody>
